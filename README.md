@@ -2,7 +2,7 @@
 POVERTY
 ===========
 
-A Python Package to calculate various parameters related to poverty and inequality.
+A Python Package to calculate indexes related to poverty and inequality.
 
 Who is this for?
 ----------------
