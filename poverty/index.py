@@ -13,7 +13,7 @@
     Measures Of Inequality:
         1. Gini Coefficient
      
-	To Visualise the Inequality graphically
+    To Visualise the Inequality graphically
         1. Lorenz Curve 
     
 """
