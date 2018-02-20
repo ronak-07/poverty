@@ -16,29 +16,40 @@
 	To Visualise the Inequality graphically
         1. Lorenz Curve 
 """
+from codecs import open  # To use a consistent encoding
+from os import path
+
+
 # Use setuptools in preference to distutils
 try:
     from setuptools import setup
 except ImportError:
-    from distutils.core import setup
-import os
+    from distutils.core import setup    
 
-VERSION = '2.3'
+here = path.dirname(path.abspath(__file__))
+
+# Get the long description from the relevant file
+with open(path.join(here, 'README.rst')) as f:
+    long_desc = f.read()
+
+
+VERSION = '7.2'
 DESCRIPTION = "A Python Package to calculate indexes related to poverty and inequality."
-LONG_DESCRIPTION = "This is a package that can be used to find following parameters:Headcount Index, Poverty Index, Squared Poverty Index, Sen-Shorrocks-Thon Index, Sen Index, Watts Index, Gini Coefficient, Draw Lorenz Curve"
 LICENSE = "MIT"
 CLASSIFIERS = [
     'Development Status :: 3 - Alpha',
     'Operating System :: OS Independent',
     'Intended Audience :: Education',
+    'License :: OSI Approved :: MIT License',
     'Programming Language :: Python :: 3',
     'Programming Language :: Python :: 3.2',
     'Programming Language :: Python :: 3.3',
     'Programming Language :: Python :: 3.4',
-    'Programming Language :: Python :: 3.5']
+	'Programming Language :: Python :: 3.5',
+    'Programming Language :: Python :: 3.6']
 
 URL="https://github.com/ronak-07/poverty"
-KEYWORDS=['POVERTY','INEQUALITY','ECONOMICS']
+KEYWORDS=['Poverty','Inequality','Economics','Gini Coefficient','Lorenz Curve']
 
 
 setup(
@@ -48,10 +59,10 @@ setup(
     description=DESCRIPTION,
     license=LICENSE,
     classifiers=CLASSIFIERS,
-    author= 'Ronak Sisodia and Rishi Kumar (Project Coordinator)',
+    author= 'Ronak Sisodia',
     author_email='ronaksisodia07@gmail.com',
     install_requires=['numpy','matplotlib'],
     url=URL,
-    keywords=KEYWORDS
+    keywords=KEYWORDS,
+    long_description=long_desc 
     )
-    
